@@ -18,14 +18,16 @@
 
 .modal-content {
   background-color: #fff;
-  margin: 15% auto;
+  margin: 5% auto;
   padding: 30px;
   border-radius: 10px;
-  width: 60%;
-  max-width: 600px;
+  width: 80%;
+  max-width: 800px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   position: relative;
   animation: modalopen 0.4s;
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 @keyframes modalopen {
@@ -55,10 +57,25 @@
   font-size: 24px;
 }
 
+.modal-content h3 {
+  color: #0056b3;
+  margin: 20px 0 10px 0;
+  font-size: 18px;
+}
+
 .modal-content p {
   font-size: 16px;
   line-height: 1.6;
   color: #333;
+  margin-bottom: 10px;
+}
+
+.modal-content ul {
+  margin: 10px 0 10px 20px;
+}
+
+.modal-content li {
+  margin-bottom: 5px;
 }
 
 body {
@@ -155,18 +172,18 @@ body {
   border-radius: 3px;
 }
 
-/* 服务项目 */
-.services {
+/* 产品 */
+.products {
   background: #f8f9fa;
 }
 
-.services-grid {
+.products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
-.service-card {
+.product-card {
   background: white;
   padding: 30px;
   border-radius: 10px;
@@ -175,12 +192,12 @@ body {
   text-align: center;
 }
 
-.service-card:hover {
+.product-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
-.service-card h3 {
+.product-card h3 {
   color: #007bff;
   margin-bottom: 15px;
   font-size: 22px;
@@ -189,8 +206,9 @@ body {
 /* 页脚 */
 .footer {
   background: #1a1a1a;
-  color: white;
+  color: #999;
   padding: 40px 0;
+  font-size: 13px;
 }
 
 .footer .container {
@@ -202,7 +220,7 @@ body {
 
 .footer-column {
   flex: 1;
-  min-width: 200px;
+  min-width: 180px;
 }
 
 .footer-column h4 {
@@ -220,12 +238,15 @@ body {
 .footer-column li {
   margin-bottom: 8px;
   color: #999;
+  white-space: nowrap;
+  font-size: 13px;
 }
 
 .footer-column a {
   color: #999;
   text-decoration: none;
   transition: color 0.3s;
+  font-size: 13px;
 }
 
 .footer-column a:hover {
@@ -251,7 +272,7 @@ body {
 .footer-links a {
   color: #999;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 13px;
   transition: color 0.3s;
 }
 
@@ -279,7 +300,7 @@ body {
 .footer-credits a {
   color: #999;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 13px;
   transition: color 0.3s;
 }
 
@@ -288,7 +309,7 @@ body {
 }
 
 .footer-copyright {
-  font-size: 12px;
+  font-size: 13px;
   color: #999;
   margin: 0;
 }
@@ -327,8 +348,12 @@ body {
   }
   
   .header .container {
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
+  }
+  
+  .logo {
+    flex-direction: row;
   }
   
   .footer .container {
